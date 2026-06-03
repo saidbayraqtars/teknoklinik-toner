@@ -10,6 +10,7 @@ import KuryeHizmeti from './pages/KuryeHizmeti'
 import Blog from './pages/Blog'
 import BlogDetail from './pages/BlogDetail'
 import Iletisim from './pages/Iletisim'
+import NotFound from './pages/NotFound'
 import './App.css'
 
 export default function App() {
@@ -25,6 +26,7 @@ export default function App() {
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogDetail />} />
           <Route path="/iletisim" element={<Iletisim />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
       <Footer />

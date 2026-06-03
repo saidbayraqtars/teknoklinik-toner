@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import Seo, { SITE_URL } from '../components/Seo'
 import kuryeImg from '../assets/images/kurye.png'
 import './Pages.css'
 
@@ -44,9 +45,37 @@ const coverage = [
   { name: 'Vezirköprü', time: '60-80 dk', active: false },
 ]
 
+const kuryeJsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    serviceType: 'Samsun Motorlu Toner Dolumu Servisi ve Kurye',
+    name: 'Samsun 7/24 Yazıcı ve Toner Motorlu Kurye Hizmeti',
+    provider: { '@type': 'LocalBusiness', name: 'Teknoklinik', url: SITE_URL, telephone: '+90-545-342-2944' },
+    areaServed: ['Atakum', 'İlkadım', 'Canik', 'Tekkeköy', 'Bafra', 'Çarşamba'].map(n => ({ '@type': 'City', name: `${n}, Samsun` })),
+    hoursAvailable: { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'], opens: '00:00', closes: '23:59' },
+    description: 'Samsun motorlu toner dolumu servisi ve yazıcı kurye hizmeti. 30 dakikada kapınızda, 7/24 aktif. Yazıcı ve kartuşunuzu kapıdan teslim alıp aynı gün iade ederiz.',
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Ana Sayfa', item: SITE_URL },
+      { '@type': 'ListItem', position: 2, name: 'Kurye Hizmeti', item: `${SITE_URL}/kurye-hizmeti` },
+    ],
+  },
+]
+
 export default function KuryeHizmeti() {
   return (
     <div className="inner-page">
+      <Seo
+        title="Samsun Motorlu Toner Dolumu Servisi ve 7/24 Kurye | 30 Dakikada — Teknoklinik"
+        description="Samsun motorlu toner dolumu servisi ve yazıcı kurye hizmeti. Atakum, İlkadım, Canik, Tekkeköy'e 30 dakikada kapınızda. 7/24 motorlu kurye ile kapıdan teslim ve aynı gün iade."
+        keywords="samsun motorlu toner dolumu servisi, motorlu toner dolumu, samsun yazıcı kurye, toner kurye samsun, 7/24 kurye toner, atakum toner kurye, ilkadım toner teslimat"
+        path="/kurye-hizmeti"
+        jsonLd={kuryeJsonLd}
+      />
       <section className="page-hero">
         <div className="container page-hero-content">
           <div className="breadcrumb">
@@ -57,10 +86,10 @@ export default function KuryeHizmeti() {
           <h1>Samsun 7/24 Yazıcı Kurye Hizmeti | 30 Dakikada Kapınızda</h1>
           <p>Motorlu kurye ağımız ile Samsun'un her noktasına toner dolum ve yazıcı tamiri için hızlı teslim hizmeti sunuyoruz.</p>
           <div className="page-hero-actions">
-            <a href="https://wa.me/905362551234?text=Kurye%20göndermek%20istiyorum." target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-lg">
+            <a href="https://wa.me/905453422944?text=Kurye%20göndermek%20istiyorum." target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-lg">
               🛵 Hemen Kurye İste
             </a>
-            <a href="tel:+903625551234" className="btn btn-secondary btn-lg">📞 Ara</a>
+            <a href="tel:+905453422944" className="btn btn-secondary btn-lg">📞 Ara</a>
           </div>
         </div>
       </section>
@@ -95,7 +124,7 @@ export default function KuryeHizmeti() {
             ))}
           </div>
           <div style={{textAlign:'center', marginTop:'48px'}}>
-            <a href="https://wa.me/905362551234?text=Kurye%20göndermek%20istiyorum." target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-lg reveal">
+            <a href="https://wa.me/905453422944?text=Kurye%20göndermek%20istiyorum." target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-lg reveal">
               🛵 Kurye İste
             </a>
           </div>
@@ -126,7 +155,7 @@ export default function KuryeHizmeti() {
               </div>
             </div>
             <div className="courier-img-wrap reveal">
-              <img src={kuryeImg} alt="Samsun motorlu kurye yazıcı teslim hizmeti" style={{borderRadius:'var(--radius-xl)', width:'100%', objectFit:'cover', height:'480px'}} />
+              <img src={kuryeImg} alt="Samsun motorlu toner dolumu servisi ve yazıcı kurye teslim hizmeti" loading="lazy" decoding="async" style={{borderRadius:'var(--radius-xl)', width:'100%', objectFit:'cover', height:'480px'}} />
               <div className="courier-stats-overlay">
                 <div className="courier-stat-item">
                   <div className="courier-stat-num">30 Dk</div>
@@ -152,11 +181,11 @@ export default function KuryeHizmeti() {
               Yazıcınızı kapınızdan teslim alıp, işlem tamamlanınca aynı gün iade ediyoruz.
             </p>
             <div style={{display:'flex', gap:'16px', justifyContent:'center', flexWrap:'wrap'}}>
-              <a href="https://wa.me/905362551234?text=Kurye%20göndermek%20istiyorum." target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-lg">
+              <a href="https://wa.me/905453422944?text=Kurye%20göndermek%20istiyorum." target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-lg">
                 💬 WhatsApp Kurye
               </a>
-              <a href="tel:+903625551234" className="btn btn-secondary btn-lg">
-                📞 0362 555 1234
+              <a href="tel:+905453422944" className="btn btn-secondary btn-lg">
+                📞 0545 342 29 44
               </a>
             </div>
           </div>

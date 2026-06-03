@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import Seo, { SITE_URL } from '../components/Seo'
 import './Pages.css'
 
 const brands = [
@@ -59,9 +60,46 @@ const faqs = [
   },
 ]
 
+const tonerJsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    serviceType: 'Samsun Toner Dolumu',
+    name: 'Samsun Toner Dolumu — HP, Canon, Brother, Epson',
+    provider: { '@type': 'LocalBusiness', name: 'Teknoklinik', url: SITE_URL, telephone: '+90-545-342-2944' },
+    areaServed: ['Atakum', 'İlkadım', 'Canik', 'Tekkeköy'].map(n => ({ '@type': 'City', name: `${n}, Samsun` })),
+    description: 'HP, Canon, Brother, Epson tüm marka yazıcılar için garantili Samsun toner dolumu. Motorlu toner dolumu servisi ile 7/24 kapıdan teslim.',
+    offers: brands.map(b => ({ '@type': 'Offer', name: `${b.name} Toner Dolumu`, price: b.price.replace(/[^0-9]/g, ''), priceCurrency: 'TRY' })),
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Ana Sayfa', item: SITE_URL },
+      { '@type': 'ListItem', position: 2, name: 'Toner Dolumu', item: `${SITE_URL}/toner-dolumu` },
+    ],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map(f => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.a },
+    })),
+  },
+]
+
 export default function TonerDolumu() {
   return (
     <div className="inner-page">
+      <Seo
+        title="Samsun Toner Dolumu | HP Canon Brother Epson Garantili Dolum — Teknoklinik"
+        description="Samsun toner dolumu: HP, Canon, Brother, Epson tüm markalar için profesyonel ve garantili dolum. Motorlu toner dolumu servisi ile 7/24 kapınızdan teslim alıyoruz. Fiyatlar 250 ₺'den başlar."
+        keywords="samsun toner dolumu, motorlu toner dolumu, samsun motorlu toner dolumu servisi, hp toner dolumu samsun, canon toner dolumu, brother toner dolumu, epson toner dolumu, kartuş dolumu samsun"
+        path="/toner-dolumu"
+        jsonLd={tonerJsonLd}
+      />
       <section className="page-hero">
         <div className="container page-hero-content">
           <div className="breadcrumb">
@@ -73,13 +111,13 @@ export default function TonerDolumu() {
           <p>Tüm marka ve modeller için garantili, profesyonel toner dolumu. 7/24 kurye ile kapınızdan teslim alıyoruz.</p>
           <div className="page-hero-actions">
             <a
-              href="https://wa.me/905362551234?text=Toner%20dolumu%20fiyat%20almak%20istiyorum."
+              href="https://wa.me/905453422944?text=Toner%20dolumu%20fiyat%20almak%20istiyorum."
               target="_blank" rel="noopener noreferrer"
               className="btn btn-primary btn-lg"
             >
               💬 Fiyat Al
             </a>
-            <a href="tel:+903625551234" className="btn btn-secondary btn-lg">
+            <a href="tel:+905453422944" className="btn btn-secondary btn-lg">
               📞 Ara
             </a>
           </div>
@@ -114,7 +152,7 @@ export default function TonerDolumu() {
                   </div>
                 </div>
                 <a
-                  href={`https://wa.me/905362551234?text=${encodeURIComponent(`${brand.name} toner dolumu fiyatı almak istiyorum.`)}`}
+                  href={`https://wa.me/905453422944?text=${encodeURIComponent(`${brand.name} toner dolumu fiyatı almak istiyorum.`)}`}
                   target="_blank" rel="noopener noreferrer"
                   className="btn btn-primary"
                   style={{marginTop: '20px', width:'100%', justifyContent:'center'}}
@@ -170,7 +208,7 @@ export default function TonerDolumu() {
           <div className="page-cta-box reveal">
             <h3>Hâlâ Sorunuz mu Var?</h3>
             <p>Uzman ekibimiz tüm sorularınızı yanıtlamak için hazır.</p>
-            <a href="tel:+903625551234" className="btn btn-primary btn-lg">📞 0362 555 1234</a>
+            <a href="tel:+905453422944" className="btn btn-primary btn-lg">📞 0545 342 29 44</a>
           </div>
         </div>
       </section>

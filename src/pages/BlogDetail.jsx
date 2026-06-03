@@ -1,4 +1,5 @@
 import { useParams, Link } from 'react-router-dom'
+import Seo, { SITE_URL } from '../components/Seo'
 import './Pages.css'
 
 const articles = {
@@ -28,7 +29,7 @@ const articles = {
       <div class="article-cta-box">
         <h4>🛵 Hâlâ Sorun Devam Ediyor mu?</h4>
         <p>Teknoklinik ekibi Samsun genelinde 7/24 kapınızdadır. Kurye çağırın, yazıcınızı teslim alıp aynı gün çözüm sunarız.</p>
-        <a href="https://wa.me/905362551234?text=Yazıcımdan%20çizgili%20baskı%20alıyorum,%20destek%20istiyorum." target="_blank" rel="noopener noreferrer">WhatsApp ile Destek Al →</a>
+        <a href="https://wa.me/905453422944?text=Yazıcımdan%20çizgili%20baskı%20alıyorum,%20destek%20istiyorum." target="_blank" rel="noopener noreferrer">WhatsApp ile Destek Al →</a>
       </div>
     `,
   },
@@ -58,7 +59,7 @@ const articles = {
       <div class="article-cta-box">
         <h4>🖨️ Garantili Dolum için Bize Ulaşın</h4>
         <p>Samsun'da HP, Canon, Brother, Epson dolumu için 7/24 hizmetinizdeyiz. 3 ay yazılı garanti.</p>
-        <a href="https://wa.me/905362551234?text=Toner%20dolumu%20fiyatı%20almak%20istiyorum." target="_blank" rel="noopener noreferrer">Fiyat Al →</a>
+        <a href="https://wa.me/905453422944?text=Toner%20dolumu%20fiyatı%20almak%20istiyorum." target="_blank" rel="noopener noreferrer">Fiyat Al →</a>
       </div>
     `,
   },
@@ -85,7 +86,7 @@ const articles = {
       <div class="article-cta-box">
         <h4>🔧 Sorun Devam Ediyor mu?</h4>
         <p>İlkadım, Atakum, Canik ve Tekkeköy'e 7/24 kurye ile teknik destek.</p>
-        <a href="https://wa.me/905362551234?text=Kağıt%20sıkışması%20sorunu%20için%20destek%20istiyorum." target="_blank" rel="noopener noreferrer">Destek İste →</a>
+        <a href="https://wa.me/905453422944?text=Kağıt%20sıkışması%20sorunu%20için%20destek%20istiyorum." target="_blank" rel="noopener noreferrer">Destek İste →</a>
       </div>
     `,
   },
@@ -96,15 +97,52 @@ const defaultArticle = {
   title: 'Yazıcı Bakımı ve Teknik Servis',
   date: '2024',
   readTime: '3 dk',
-  content: `<p>Bu makale yakında yayınlanacak. Yazıcı sorunlarınız için <a href="tel:+903625551234">bizi arayın</a> veya WhatsApp üzerinden iletişime geçin.</p>`,
+  content: `<p>Bu makale yakında yayınlanacak. Yazıcı sorunlarınız için <a href="tel:+905453422944">bizi arayın</a> veya WhatsApp üzerinden iletişime geçin.</p>`,
+}
+
+function stripHtml(html) {
+  return html.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim()
 }
 
 export default function BlogDetail() {
   const { slug } = useParams()
   const article = articles[slug] || defaultArticle
+  const path = `/blog/${slug || ''}`
+  const desc = stripHtml(article.content).slice(0, 160)
+
+  const jsonLd = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BlogPosting',
+      headline: article.title,
+      url: `${SITE_URL}${path}`,
+      datePublished: article.date,
+      articleSection: article.category,
+      inLanguage: 'tr-TR',
+      author: { '@type': 'Organization', name: 'Teknoklinik' },
+      publisher: { '@type': 'Organization', name: 'Teknoklinik', url: SITE_URL },
+      description: desc,
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Ana Sayfa', item: SITE_URL },
+        { '@type': 'ListItem', position: 2, name: 'Blog', item: `${SITE_URL}/blog` },
+        { '@type': 'ListItem', position: 3, name: article.title, item: `${SITE_URL}${path}` },
+      ],
+    },
+  ]
 
   return (
     <div className="inner-page">
+      <Seo
+        title={`${article.title} | Teknoklinik Samsun`}
+        description={desc}
+        keywords={`${article.category.toLowerCase()}, samsun toner dolumu, yazıcı tamiri samsun, ${article.title.toLowerCase()}`}
+        path={path}
+        jsonLd={jsonLd}
+      />
       <section className="page-hero">
         <div className="container page-hero-content">
           <div className="breadcrumb">
@@ -136,10 +174,10 @@ export default function BlogDetail() {
             <div className="sidebar-card card">
               <h4>🛵 Hızlı Destek</h4>
               <p>Samsun genelinde 7/24 motorlu kurye hizmeti.</p>
-              <a href="tel:+903625551234" className="btn btn-primary" style={{width:'100%', justifyContent:'center', marginBottom:'10px'}}>
-                📞 0362 555 1234
+              <a href="tel:+905453422944" className="btn btn-primary" style={{width:'100%', justifyContent:'center', marginBottom:'10px'}}>
+                📞 0545 342 29 44
               </a>
-              <a href="https://wa.me/905362551234" target="_blank" rel="noopener noreferrer" className="btn btn-outline" style={{width:'100%', justifyContent:'center'}}>
+              <a href="https://wa.me/905453422944" target="_blank" rel="noopener noreferrer" className="btn btn-outline" style={{width:'100%', justifyContent:'center'}}>
                 💬 WhatsApp
               </a>
             </div>

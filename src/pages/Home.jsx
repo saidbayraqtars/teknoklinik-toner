@@ -1,8 +1,33 @@
 import { Link } from 'react-router-dom'
+import Seo, { SITE_URL } from '../components/Seo'
 import heroImg from '../assets/images/hero.png'
 import tonerImg from '../assets/images/toner.png'
 import kuryeImg from '../assets/images/kurye.png'
 import './Home.css'
+
+const homeJsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'Teknoklinik | Samsun Toner Dolumu ve Yazıcı Tamiri',
+    url: SITE_URL,
+    inLanguage: 'tr-TR',
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: `${SITE_URL}/blog?q={search_term_string}`,
+      'query-input': 'required name=search_term_string',
+    },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    serviceType: 'Samsun Motorlu Toner Dolumu Servisi',
+    name: 'Samsun Toner Dolumu ve Motorlu Kurye Hizmeti',
+    provider: { '@type': 'LocalBusiness', name: 'Teknoklinik', url: SITE_URL, telephone: '+90-545-342-2944' },
+    areaServed: ['Atakum', 'İlkadım', 'Canik', 'Tekkeköy', 'Bafra', 'Çarşamba', 'Samsun'].map(n => ({ '@type': 'City', name: `${n}, Samsun` })),
+    description: 'Samsun toner dolumu, motorlu toner dolumu servisi, kartuş yenileme ve yazıcı tamiri. 7/24 motorlu kurye ile 30 dakikada kapınızda.',
+  },
+]
 
 const trustItems = [
   { icon: '🛵', title: '30 Dk. Kapınızda', desc: 'Samsun içi garantili teslimat' },
@@ -119,10 +144,17 @@ const blogPosts = [
 export default function Home() {
   return (
     <div className="home">
+      <Seo
+        title="Samsun Toner Dolumu ve Motorlu Toner Dolumu Servisi | Teknoklinik 7/24"
+        description="Samsun toner dolumu ve motorlu toner dolumu servisi. Atakum, İlkadım, Canik, Tekkeköy'e 7/24 motorlu kurye ile 30 dakikada kapınızda. HP, Canon, Brother, Epson garantili dolum ve yazıcı tamiri."
+        keywords="samsun toner dolumu, samsun motorlu toner dolumu servisi, motorlu toner dolumu, samsun toner dolum, atakum toner dolumu, ilkadım yazıcı tamiri, canik kartuş yenileme, tekkeköy teknik servis, yazıcı tamiri samsun, 7/24 kurye toner"
+        path="/"
+        jsonLd={homeJsonLd}
+      />
       {/* HERO */}
       <section className="hero">
         <div className="hero-bg">
-          <img src={heroImg} alt="Teknoklinik profesyonel yazıcı tamiri ve toner dolum servisi" className="hero-img" />
+          <img src={heroImg} alt="Samsun toner dolumu ve yazıcı tamiri — Teknoklinik motorlu kurye servisi" className="hero-img" fetchpriority="high" decoding="async" width="1920" height="1080" />
           <div className="hero-overlay" />
         </div>
         <div className="container hero-content">
@@ -136,19 +168,19 @@ export default function Home() {
               <span className="gradient-text">| 7/24 Kapıdan Teslim</span>
             </h1>
             <p className="hero-desc reveal reveal-delay-2">
-              Atakum, İlkadım, Canik, Tekkeköy'e motorlu kurye ile <strong>30 dakikada</strong> kapınızdayız. 
+              Samsun toner dolumu ve <strong>motorlu toner dolumu servisi</strong>: Atakum, İlkadım, Canik, Tekkeköy'e motorlu kurye ile <strong>30 dakikada</strong> kapınızdayız.
               HP, Canon, Brother, Epson — tüm markalar garantili dolum ve onarım.
             </p>
             <div className="hero-actions reveal reveal-delay-3">
               <a
-                href="https://wa.me/905362551234?text=Merhaba!%20Kurye%20g%C3%B6ndermek%20istiyorum."
+                href="https://wa.me/905453422944?text=Merhaba!%20Kurye%20g%C3%B6ndermek%20istiyorum."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-primary btn-lg"
               >
                 🛵 Kurye Çağır
               </a>
-              <a href="tel:+903625551234" className="btn btn-secondary btn-lg">
+              <a href="tel:+905453422944" className="btn btn-secondary btn-lg">
                 📞 Hemen Ara
               </a>
             </div>
@@ -245,7 +277,7 @@ export default function Home() {
           </div>
           <div className="how-cta reveal">
             <a
-              href="https://wa.me/905362551234?text=Merhaba!%20Kurye%20g%C3%B6ndermek%20istiyorum."
+              href="https://wa.me/905453422944?text=Merhaba!%20Kurye%20g%C3%B6ndermek%20istiyorum."
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-primary btn-lg"
@@ -263,7 +295,7 @@ export default function Home() {
       <section className="section toner-section">
         <div className="container toner-grid">
           <div className="toner-image reveal">
-            <img src={tonerImg} alt="Profesyonel toner dolum hizmeti Samsun" />
+            <img src={tonerImg} alt="Samsun toner dolumu — HP, Canon, Brother, Epson garantili dolum" loading="lazy" decoding="async" />
             <div className="toner-badge">
               <span>🔒</span>
               <div>
@@ -276,8 +308,8 @@ export default function Home() {
             <div className="section-label reveal">🖨️ Toner Dolumu</div>
             <h2 className="reveal reveal-delay-1">Atakum'dan Tekkeköy'e <br /><span className="gradient-text">Garantili Toner Dolumu</span></h2>
             <p className="reveal reveal-delay-2" style={{marginTop:'16px'}}>
-              HP LaserJet, Canon imageCLASS, Brother HL ve Epson AL serisi yazıcılarınız için 
-              profesyonel toner dolumu yapıyoruz. Dolum sonrası test baskısı ve 3 ay yazılı garanti.
+              HP LaserJet, Canon imageCLASS, Brother HL ve Epson AL serisi yazıcılarınız için
+              profesyonel Samsun toner dolumu yapıyoruz. Motorlu toner dolumu servisi ile kartuşunuzu kapınızdan alır, dolum sonrası test baskısı ve 3 ay yazılı garanti ile iade ederiz.
             </p>
             <div className="toner-brands reveal reveal-delay-3">
               {brands.map(b => (
@@ -345,7 +377,7 @@ export default function Home() {
             </Link>
           </div>
           <div className="courier-image reveal">
-            <img src={kuryeImg} alt="Samsun 7/24 motorlu kurye toner teslimat hizmeti" />
+            <img src={kuryeImg} alt="Samsun motorlu toner dolumu servisi — 7/24 kurye teslimat" loading="lazy" decoding="async" />
             <div className="courier-badge">
               <div className="courier-badge-inner">
                 <span className="pulse-dot" />
@@ -435,11 +467,11 @@ export default function Home() {
             <h2>Yazıcınız mı Bozuldu? <span className="gradient-text">Hemen Arayın!</span></h2>
             <p>Samsun genelinde 30 dakikada kapınızdayız. Tamir süresince ücretsiz ikame yazıcı.</p>
             <div className="final-cta-actions">
-              <a href="tel:+903625551234" className="btn btn-primary btn-lg">
-                📞 0362 555 1234
+              <a href="tel:+905453422944" className="btn btn-primary btn-lg">
+                📞 0545 342 29 44
               </a>
               <a
-                href="https://wa.me/905362551234?text=Merhaba!%20Kurye%20g%C3%B6ndermek%20istiyorum."
+                href="https://wa.me/905453422944?text=Merhaba!%20Kurye%20g%C3%B6ndermek%20istiyorum."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-secondary btn-lg"

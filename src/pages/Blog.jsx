@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import Seo, { SITE_URL } from '../components/Seo'
 import './Pages.css'
 
 const posts = [
@@ -60,9 +61,41 @@ const posts = [
 
 const categories = ['Tümü', 'Sorun Giderme', 'Karşılaştırma', 'Teknik Rehber', 'Yerel Rehber', 'Bakım Rehberi']
 
+const blogJsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Blog',
+    name: 'Teknoklinik Yazıcı Rehberi ve Teknik Blog',
+    url: `${SITE_URL}/blog`,
+    inLanguage: 'tr-TR',
+    blogPost: posts.map(p => ({
+      '@type': 'BlogPosting',
+      headline: p.title,
+      url: `${SITE_URL}/blog/${p.slug}`,
+      description: p.desc,
+      keywords: p.tags.join(', '),
+    })),
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Ana Sayfa', item: SITE_URL },
+      { '@type': 'ListItem', position: 2, name: 'Blog', item: `${SITE_URL}/blog` },
+    ],
+  },
+]
+
 export default function Blog() {
   return (
     <div className="inner-page">
+      <Seo
+        title="Yazıcı Rehberi ve Toner Dolum Blogu | Samsun Teknik Servis — Teknoklinik"
+        description="Yazıcı sorunları, Samsun toner dolumu rehberleri ve teknik servis ipuçları. HP, Canon, Brother, Epson yazıcılar için uzman içerikler ve çözümler."
+        keywords="yazıcı rehberi, toner dolumu rehberi, samsun toner dolumu, yazıcı sorunları, yazıcı bakımı, kağıt sıkışması, kafa temizliği"
+        path="/blog"
+        jsonLd={blogJsonLd}
+      />
       <section className="page-hero">
         <div className="container page-hero-content">
           <div className="breadcrumb">

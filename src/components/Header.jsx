@@ -75,11 +75,11 @@ export default function Header() {
 
         {/* CTA + Hamburger */}
         <div className="header-actions">
-          <a href="tel:+903625551234" className="header-phone">
+          <a href="tel:+905453422944" className="header-phone">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.63 19.79 19.79 0 0110 2.18 2 2 0 0112 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L16.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0124 14h-2z"/>
             </svg>
-            <span>0362 555 1234</span>
+            <span>0545 342 29 44</span>
           </a>
           <Link to="/iletisim" className="btn btn-primary btn-sm header-cta">
             Kurye Çağır
@@ -113,8 +113,8 @@ export default function Header() {
           ))}
         </nav>
         <div className="mobile-cta">
-          <a href="tel:+903625551234" className="btn btn-outline" style={{width:'100%',justifyContent:'center'}}>
-            📞 0362 555 1234
+          <a href="tel:+905453422944" className="btn btn-outline" style={{width:'100%',justifyContent:'center'}}>
+            📞 0545 342 29 44
           </a>
           <Link to="/iletisim" className="btn btn-primary" style={{width:'100%',justifyContent:'center'}}>
             🛵 Kurye Çağır

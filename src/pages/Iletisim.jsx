@@ -1,6 +1,31 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import Seo, { SITE_URL } from '../components/Seo'
 import './Pages.css'
+
+const iletisimJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  name: 'Teknoklinik Toner Dolum ve Yazıcı Merkezi',
+  url: `${SITE_URL}/iletisim`,
+  telephone: '+90-545-342-2944',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: '19 Mayıs Mahallesi, Dr. Kamil Caddesi No:16/D',
+    addressLocality: 'İlkadım',
+    addressRegion: 'Samsun',
+    postalCode: '55030',
+    addressCountry: 'TR',
+  },
+  geo: { '@type': 'GeoCoordinates', latitude: 41.2867, longitude: 36.33 },
+  openingHoursSpecification: {
+    '@type': 'OpeningHoursSpecification',
+    dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+    opens: '00:00',
+    closes: '23:59',
+  },
+  areaServed: ['Atakum', 'İlkadım', 'Canik', 'Tekkeköy', 'Bafra', 'Çarşamba'].map(n => ({ '@type': 'City', name: `${n}, Samsun` })),
+}
 
 export default function Iletisim() {
   const [form, setForm] = useState({ name:'', phone:'', email:'', service:'', message:'' })
@@ -12,12 +37,19 @@ export default function Iletisim() {
     const msg = encodeURIComponent(
       `Ad: ${form.name}\nTelefon: ${form.phone}\nHizmet: ${form.service}\nMesaj: ${form.message}`
     )
-    window.open(`https://wa.me/905362551234?text=${msg}`, '_blank')
+    window.open(`https://wa.me/905453422944?text=${msg}`, '_blank')
     setSent(true)
   }
 
   return (
     <div className="inner-page">
+      <Seo
+        title="İletişim | Samsun Toner Dolumu ve Yazıcı Teknik Servis — Teknoklinik"
+        description="Samsun toner dolumu, yazıcı tamiri ve motorlu toner dolumu servisi için bize ulaşın. 7/24 telefon ve WhatsApp desteği. İlkadım / Samsun adresimizden tüm ilçelere kurye."
+        keywords="samsun toner dolumu iletişim, yazıcı tamiri samsun telefon, samsun motorlu toner dolumu servisi, teknoklinik samsun, toner dolumu whatsapp"
+        path="/iletisim"
+        jsonLd={iletisimJsonLd}
+      />
       <section className="page-hero">
         <div className="container page-hero-content">
           <div className="breadcrumb">
@@ -38,32 +70,18 @@ export default function Iletisim() {
             <p style={{marginBottom:'36px'}}>En hızlı destek için WhatsApp veya telefon tercih edilir. 7/24 yanınızdayız.</p>
 
             <div className="contact-cards">
-              <a href="tel:+903625551234" className="contact-card">
+              <a href="tel:+905453422944" className="contact-card">
                 <div className="contact-card-icon">📞</div>
                 <div>
-                  <div className="contact-card-title">Sabit Hat</div>
-                  <div className="contact-card-value">0362 555 1234</div>
-                </div>
-              </a>
-              <a href="tel:+905362551234" className="contact-card">
-                <div className="contact-card-icon">📱</div>
-                <div>
-                  <div className="contact-card-title">Mobil / WhatsApp</div>
-                  <div className="contact-card-value">0536 255 1234</div>
-                </div>
-              </a>
-              <a href="mailto:info@teknoklinik.com.tr" className="contact-card">
-                <div className="contact-card-icon">✉️</div>
-                <div>
-                  <div className="contact-card-title">E-posta</div>
-                  <div className="contact-card-value">info@teknoklinik.com.tr</div>
+                  <div className="contact-card-title">Telefon / WhatsApp</div>
+                  <div className="contact-card-value">0545 342 29 44</div>
                 </div>
               </a>
               <div className="contact-card">
                 <div className="contact-card-icon">📍</div>
                 <div>
                   <div className="contact-card-title">Adres</div>
-                  <div className="contact-card-value">Kale Mah. Cumhuriyet Cad. No:42, İlkadım / Samsun</div>
+                  <div className="contact-card-value">19 Mayıs Mah. Dr. Kamil Cad. No:16/D, İlkadım / Samsun</div>
                 </div>
               </div>
               <div className="contact-card" style={{border:'1px solid rgba(16,185,129,0.3)', background:'rgba(16,185,129,0.05)'}}>
@@ -145,10 +163,10 @@ export default function Iletisim() {
       <div className="map-section">
         <div className="map-placeholder">
           <div style={{fontSize:'3rem', marginBottom:'16px'}}>🗺️</div>
-          <h3>Kale Mah. Cumhuriyet Cad. No:42, İlkadım / Samsun</h3>
+          <h3>19 Mayıs Mah. Dr. Kamil Cad. No:16/D, İlkadım / Samsun</h3>
           <p style={{marginBottom:'20px'}}>Google Haritalar'da yol tarifi almak için tıklayın.</p>
           <a
-            href="https://maps.google.com/?q=İlkadım+Samsun"
+            href="https://maps.google.com/?q=19+Mayıs+Mahallesi+Dr.+Kamil+Caddesi+No:16/D+İlkadım+Samsun"
             target="_blank" rel="noopener noreferrer"
             className="btn btn-primary"
           >

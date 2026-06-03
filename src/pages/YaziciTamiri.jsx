@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import Seo, { SITE_URL } from '../components/Seo'
 import './Pages.css'
 
 const faultTypes = [
@@ -52,9 +53,36 @@ const faultTypes = [
   },
 ]
 
+const yaziciJsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    serviceType: 'Samsun Yazıcı Tamiri',
+    name: 'Samsun Yazıcı Tamiri ve Teknik Servis',
+    provider: { '@type': 'LocalBusiness', name: 'Teknoklinik', url: SITE_URL, telephone: '+90-545-342-2944' },
+    areaServed: ['Atakum', 'İlkadım', 'Canik', 'Tekkeköy'].map(n => ({ '@type': 'City', name: `${n}, Samsun` })),
+    description: 'Kağıt sıkışması, kafa temizliği, anakart onarımı ve tüm yazıcı arızaları için Samsun yazıcı tamiri. Motorlu kurye ile teslim, tamir süresince ücretsiz ikame yazıcı.',
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Ana Sayfa', item: SITE_URL },
+      { '@type': 'ListItem', position: 2, name: 'Yazıcı Tamiri', item: `${SITE_URL}/yazici-tamiri` },
+    ],
+  },
+]
+
 export default function YaziciTamiri() {
   return (
     <div className="inner-page">
+      <Seo
+        title="Samsun Yazıcı Tamiri | Aynı Gün Teknik Servis + İkame Yazıcı — Teknoklinik"
+        description="Samsun yazıcı tamiri ve teknik servis: kağıt sıkışması, kafa temizliği, anakart onarımı. İlkadım, Atakum, Canik, Tekkeköy'de aynı gün çözüm, motorlu kurye ve ücretsiz ikame yazıcı."
+        keywords="samsun yazıcı tamiri, yazıcı teknik servis samsun, ilkadım yazıcı tamiri, atakum yazıcı tamiri, hp yazıcı tamiri samsun, canon yazıcı tamiri, yazıcı anakart onarımı, kağıt sıkışması çözümü"
+        path="/yazici-tamiri"
+        jsonLd={yaziciJsonLd}
+      />
       <section className="page-hero">
         <div className="container page-hero-content">
           <div className="breadcrumb">
@@ -65,10 +93,10 @@ export default function YaziciTamiri() {
           <h1>Samsun Yazıcı Tamiri | Tüm Arızalar için Profesyonel Servis</h1>
           <p>İlkadım, Atakum, Canik ve Tekkeköy'de yazıcı arızalarınızı aynı gün çözüyoruz. Tamir süresince ücretsiz ikame yazıcı.</p>
           <div className="page-hero-actions">
-            <a href="https://wa.me/905362551234?text=Yazıcı%20tamiri%20için%20kurye%20istiyorum." target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-lg">
+            <a href="https://wa.me/905453422944?text=Yazıcı%20tamiri%20için%20kurye%20istiyorum." target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-lg">
               🛵 Kurye Çağır
             </a>
-            <a href="tel:+903625551234" className="btn btn-secondary btn-lg">📞 Ara</a>
+            <a href="tel:+905453422944" className="btn btn-secondary btn-lg">📞 Ara</a>
           </div>
         </div>
       </section>
@@ -81,7 +109,7 @@ export default function YaziciTamiri() {
             <strong>Tamir Süresince Ücretsiz İkame Yazıcı</strong>
             <span>Yazıcınız tamirdeyken iş akışınız durmasın. Ücretsiz ikame yazıcı desteği sunuyoruz.</span>
           </div>
-          <a href="tel:+903625551234" className="btn btn-primary">Bilgi Al</a>
+          <a href="tel:+905453422944" className="btn btn-primary">Bilgi Al</a>
         </div>
       </div>
 
@@ -111,7 +139,7 @@ export default function YaziciTamiri() {
                   ))}
                 </div>
                 <a
-                  href={`https://wa.me/905362551234?text=${encodeURIComponent(`${fault.title} sorunu için destek istiyorum.`)}`}
+                  href={`https://wa.me/905453422944?text=${encodeURIComponent(`${fault.title} sorunu için destek istiyorum.`)}`}
                   target="_blank" rel="noopener noreferrer"
                   className="btn btn-primary"
                   style={{marginTop:'16px', width:'100%', justifyContent:'center', fontSize:'0.9rem'}}
@@ -145,7 +173,7 @@ export default function YaziciTamiri() {
               <div style={{fontSize:'4rem', textAlign:'center', marginBottom:'16px'}}>🔧</div>
               <h3 style={{textAlign:'center', marginBottom:'12px'}}>Ücretsiz Ön Değerlendirme</h3>
               <p style={{textAlign:'center', marginBottom:'24px'}}>Kuryemiz yazıcınızı teslim aldığında arıza teşhisi ücretsiz yapılır. Fiyat onayınız alınmadan iş başlamaz.</p>
-              <a href="https://wa.me/905362551234?text=Yazıcı%20tamiri%20için%20değerlendirme%20istiyorum." target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-lg" style={{width:'100%', justifyContent:'center'}}>
+              <a href="https://wa.me/905453422944?text=Yazıcı%20tamiri%20için%20değerlendirme%20istiyorum." target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-lg" style={{width:'100%', justifyContent:'center'}}>
                 💬 WhatsApp ile İletişim
               </a>
             </div>

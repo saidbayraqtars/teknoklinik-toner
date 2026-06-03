@@ -1,0 +1,19 @@
+{
+  "name": "Teknoklinik | Samsun Toner Dolumu ve Yazıcı Tamiri",
+  "short_name": "Teknoklinik",
+  "description": "Samsun toner dolumu, motorlu toner dolumu servisi ve yazıcı tamiri. 7/24 motorlu kurye ile 30 dakikada kapınızda.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#003366",
+  "lang": "tr-TR",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
