@@ -9,7 +9,7 @@ const homeJsonLd = [
   {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: 'Teknoklinik | Samsun Toner Dolumu ve Yazıcı Tamiri',
+    name: 'Tecnoklinik | Samsun Toner Dolumu ve Yazıcı Tamiri',
     url: SITE_URL,
     inLanguage: 'tr-TR',
     potentialAction: {
@@ -23,7 +23,7 @@ const homeJsonLd = [
     '@type': 'Service',
     serviceType: 'Samsun Motorlu Toner Dolumu Servisi',
     name: 'Samsun Toner Dolumu ve Motorlu Kurye Hizmeti',
-    provider: { '@type': 'LocalBusiness', name: 'Teknoklinik', url: SITE_URL, telephone: '+90-545-342-2944' },
+    provider: { '@type': 'LocalBusiness', name: 'Tecnoklinik', url: SITE_URL, telephone: '+90-545-342-2944' },
     areaServed: ['Atakum', 'İlkadım', 'Canik', 'Tekkeköy', 'Bafra', 'Çarşamba', 'Samsun'].map(n => ({ '@type': 'City', name: `${n}, Samsun` })),
     description: 'Samsun toner dolumu, motorlu toner dolumu servisi, kartuş yenileme ve yazıcı tamiri. 7/24 motorlu kurye ile 30 dakikada kapınızda.',
   },
@@ -145,7 +145,7 @@ export default function Home() {
   return (
     <div className="home">
       <Seo
-        title="Samsun Toner Dolumu ve Motorlu Toner Dolumu Servisi | Teknoklinik 7/24"
+        title="Samsun Toner Dolumu ve Motorlu Toner Dolumu Servisi | Tecnoklinik 7/24"
         description="Samsun toner dolumu ve motorlu toner dolumu servisi. Atakum, İlkadım, Canik, Tekkeköy'e 7/24 motorlu kurye ile 30 dakikada kapınızda. HP, Canon, Brother, Epson garantili dolum ve yazıcı tamiri."
         keywords="samsun toner dolumu, samsun motorlu toner dolumu servisi, motorlu toner dolumu, samsun toner dolum, atakum toner dolumu, ilkadım yazıcı tamiri, canik kartuş yenileme, tekkeköy teknik servis, yazıcı tamiri samsun, 7/24 kurye toner"
         path="/"
@@ -154,7 +154,7 @@ export default function Home() {
       {/* HERO */}
       <section className="hero">
         <div className="hero-bg">
-          <img src={heroImg} alt="Samsun toner dolumu ve yazıcı tamiri — Teknoklinik motorlu kurye servisi" className="hero-img" fetchpriority="high" decoding="async" width="1920" height="1080" />
+          <img src={heroImg} alt="Samsun toner dolumu ve yazıcı tamiri — Tecnoklinik motorlu kurye servisi" className="hero-img" fetchpriority="high" decoding="async" width="1920" height="1080" />
           <div className="hero-overlay" />
         </div>
         <div className="container hero-content">

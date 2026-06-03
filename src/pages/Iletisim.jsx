@@ -6,7 +6,7 @@ import './Pages.css'
 const iletisimJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
-  name: 'Teknoklinik Toner Dolum ve Yazıcı Merkezi',
+  name: 'Tecnoklinik Toner Dolum ve Yazıcı Merkezi',
   url: `${SITE_URL}/iletisim`,
   telephone: '+90-545-342-2944',
   address: {
@@ -44,9 +44,9 @@ export default function Iletisim() {
   return (
     <div className="inner-page">
       <Seo
-        title="İletişim | Samsun Toner Dolumu ve Yazıcı Teknik Servis — Teknoklinik"
+        title="İletişim | Samsun Toner Dolumu ve Yazıcı Teknik Servis — Tecnoklinik"
         description="Samsun toner dolumu, yazıcı tamiri ve motorlu toner dolumu servisi için bize ulaşın. 7/24 telefon ve WhatsApp desteği. İlkadım / Samsun adresimizden tüm ilçelere kurye."
-        keywords="samsun toner dolumu iletişim, yazıcı tamiri samsun telefon, samsun motorlu toner dolumu servisi, teknoklinik samsun, toner dolumu whatsapp"
+        keywords="samsun toner dolumu iletişim, yazıcı tamiri samsun telefon, samsun motorlu toner dolumu servisi, tecnoklinik samsun, toner dolumu whatsapp"
         path="/iletisim"
         jsonLd={iletisimJsonLd}
       />

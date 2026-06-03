@@ -6,7 +6,7 @@ export default function NotFound() {
   return (
     <div className="inner-page">
       <Seo
-        title="Sayfa Bulunamadı (404) | Teknoklinik Samsun Toner Dolumu"
+        title="Sayfa Bulunamadı (404) | Tecnoklinik Samsun Toner Dolumu"
         description="Aradığınız sayfa bulunamadı. Samsun toner dolumu, yazıcı tamiri ve motorlu toner dolumu servisi için ana sayfamıza dönebilirsiniz."
         path="/404"
       />

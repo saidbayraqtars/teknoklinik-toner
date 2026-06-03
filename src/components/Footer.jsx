@@ -36,7 +36,7 @@ export default function Footer() {
                 </svg>
               </div>
               <div>
-                <div className="footer-logo-brand">Teknoklinik</div>
+                <div className="footer-logo-brand">Tecnoklinik</div>
                 <div className="footer-logo-sub">Toner Dolum ve Yazıcı Merkezi</div>
               </div>
             </div>
@@ -111,7 +111,7 @@ export default function Footer() {
 
       <div className="footer-bottom">
         <div className="container footer-bottom-inner">
-          <p>© 2024 Teknoklinik Toner Dolum ve Yazıcı Merkezi. Tüm hakları saklıdır.</p>
+          <p>© 2024 Tecnoklinik Toner Dolum ve Yazıcı Merkezi. Tüm hakları saklıdır.</p>
           <p>Samsun'da Toner Dolum ve Yazıcı Tamiri Hizmetleri</p>
         </div>
       </div>

@@ -66,7 +66,7 @@ const tonerJsonLd = [
     '@type': 'Service',
     serviceType: 'Samsun Toner Dolumu',
     name: 'Samsun Toner Dolumu — HP, Canon, Brother, Epson',
-    provider: { '@type': 'LocalBusiness', name: 'Teknoklinik', url: SITE_URL, telephone: '+90-545-342-2944' },
+    provider: { '@type': 'LocalBusiness', name: 'Tecnoklinik', url: SITE_URL, telephone: '+90-545-342-2944' },
     areaServed: ['Atakum', 'İlkadım', 'Canik', 'Tekkeköy'].map(n => ({ '@type': 'City', name: `${n}, Samsun` })),
     description: 'HP, Canon, Brother, Epson tüm marka yazıcılar için garantili Samsun toner dolumu. Motorlu toner dolumu servisi ile 7/24 kapıdan teslim.',
     offers: brands.map(b => ({ '@type': 'Offer', name: `${b.name} Toner Dolumu`, price: b.price.replace(/[^0-9]/g, ''), priceCurrency: 'TRY' })),
@@ -94,7 +94,7 @@ export default function TonerDolumu() {
   return (
     <div className="inner-page">
       <Seo
-        title="Samsun Toner Dolumu | HP Canon Brother Epson Garantili Dolum — Teknoklinik"
+        title="Samsun Toner Dolumu | HP Canon Brother Epson Garantili Dolum — Tecnoklinik"
         description="Samsun toner dolumu: HP, Canon, Brother, Epson tüm markalar için profesyonel ve garantili dolum. Motorlu toner dolumu servisi ile 7/24 kapınızdan teslim alıyoruz. Fiyatlar 250 ₺'den başlar."
         keywords="samsun toner dolumu, motorlu toner dolumu, samsun motorlu toner dolumu servisi, hp toner dolumu samsun, canon toner dolumu, brother toner dolumu, epson toner dolumu, kartuş dolumu samsun"
         path="/toner-dolumu"

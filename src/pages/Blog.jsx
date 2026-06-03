@@ -65,7 +65,7 @@ const blogJsonLd = [
   {
     '@context': 'https://schema.org',
     '@type': 'Blog',
-    name: 'Teknoklinik Yazıcı Rehberi ve Teknik Blog',
+    name: 'Tecnoklinik Yazıcı Rehberi ve Teknik Blog',
     url: `${SITE_URL}/blog`,
     inLanguage: 'tr-TR',
     blogPost: posts.map(p => ({
@@ -90,7 +90,7 @@ export default function Blog() {
   return (
     <div className="inner-page">
       <Seo
-        title="Yazıcı Rehberi ve Toner Dolum Blogu | Samsun Teknik Servis — Teknoklinik"
+        title="Yazıcı Rehberi ve Toner Dolum Blogu | Samsun Teknik Servis — Tecnoklinik"
         description="Yazıcı sorunları, Samsun toner dolumu rehberleri ve teknik servis ipuçları. HP, Canon, Brother, Epson yazıcılar için uzman içerikler ve çözümler."
         keywords="yazıcı rehberi, toner dolumu rehberi, samsun toner dolumu, yazıcı sorunları, yazıcı bakımı, kağıt sıkışması, kafa temizliği"
         path="/blog"

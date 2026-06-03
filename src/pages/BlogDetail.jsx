@@ -28,7 +28,7 @@ const articles = {
       
       <div class="article-cta-box">
         <h4>🛵 Hâlâ Sorun Devam Ediyor mu?</h4>
-        <p>Teknoklinik ekibi Samsun genelinde 7/24 kapınızdadır. Kurye çağırın, yazıcınızı teslim alıp aynı gün çözüm sunarız.</p>
+        <p>Tecnoklinik ekibi Samsun genelinde 7/24 kapınızdadır. Kurye çağırın, yazıcınızı teslim alıp aynı gün çözüm sunarız.</p>
         <a href="https://wa.me/905453422944?text=Yazıcımdan%20çizgili%20baskı%20alıyorum,%20destek%20istiyorum." target="_blank" rel="noopener noreferrer">WhatsApp ile Destek Al →</a>
       </div>
     `,
@@ -119,8 +119,8 @@ export default function BlogDetail() {
       datePublished: article.date,
       articleSection: article.category,
       inLanguage: 'tr-TR',
-      author: { '@type': 'Organization', name: 'Teknoklinik' },
-      publisher: { '@type': 'Organization', name: 'Teknoklinik', url: SITE_URL },
+      author: { '@type': 'Organization', name: 'Tecnoklinik' },
+      publisher: { '@type': 'Organization', name: 'Tecnoklinik', url: SITE_URL },
       description: desc,
     },
     {
@@ -137,7 +137,7 @@ export default function BlogDetail() {
   return (
     <div className="inner-page">
       <Seo
-        title={`${article.title} | Teknoklinik Samsun`}
+        title={`${article.title} | Tecnoklinik Samsun`}
         description={desc}
         keywords={`${article.category.toLowerCase()}, samsun toner dolumu, yazıcı tamiri samsun, ${article.title.toLowerCase()}`}
         path={path}
@@ -164,7 +164,7 @@ export default function BlogDetail() {
               <div className="article-meta">
                 <span>📅 {article.date}</span>
                 <span>⏱ {article.readTime} okuma</span>
-                <span>✍️ Teknoklinik Ekibi</span>
+                <span>✍️ Tecnoklinik Ekibi</span>
               </div>
             </div>
             <div className="article-body" dangerouslySetInnerHTML={{__html: article.content}} />

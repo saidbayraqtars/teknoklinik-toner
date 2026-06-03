@@ -59,7 +59,7 @@ const yaziciJsonLd = [
     '@type': 'Service',
     serviceType: 'Samsun Yazıcı Tamiri',
     name: 'Samsun Yazıcı Tamiri ve Teknik Servis',
-    provider: { '@type': 'LocalBusiness', name: 'Teknoklinik', url: SITE_URL, telephone: '+90-545-342-2944' },
+    provider: { '@type': 'LocalBusiness', name: 'Tecnoklinik', url: SITE_URL, telephone: '+90-545-342-2944' },
     areaServed: ['Atakum', 'İlkadım', 'Canik', 'Tekkeköy'].map(n => ({ '@type': 'City', name: `${n}, Samsun` })),
     description: 'Kağıt sıkışması, kafa temizliği, anakart onarımı ve tüm yazıcı arızaları için Samsun yazıcı tamiri. Motorlu kurye ile teslim, tamir süresince ücretsiz ikame yazıcı.',
   },
@@ -77,7 +77,7 @@ export default function YaziciTamiri() {
   return (
     <div className="inner-page">
       <Seo
-        title="Samsun Yazıcı Tamiri | Aynı Gün Teknik Servis + İkame Yazıcı — Teknoklinik"
+        title="Samsun Yazıcı Tamiri | Aynı Gün Teknik Servis + İkame Yazıcı — Tecnoklinik"
         description="Samsun yazıcı tamiri ve teknik servis: kağıt sıkışması, kafa temizliği, anakart onarımı. İlkadım, Atakum, Canik, Tekkeköy'de aynı gün çözüm, motorlu kurye ve ücretsiz ikame yazıcı."
         keywords="samsun yazıcı tamiri, yazıcı teknik servis samsun, ilkadım yazıcı tamiri, atakum yazıcı tamiri, hp yazıcı tamiri samsun, canon yazıcı tamiri, yazıcı anakart onarımı, kağıt sıkışması çözümü"
         path="/yazici-tamiri"

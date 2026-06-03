@@ -51,7 +51,7 @@ const kuryeJsonLd = [
     '@type': 'Service',
     serviceType: 'Samsun Motorlu Toner Dolumu Servisi ve Kurye',
     name: 'Samsun 7/24 Yazıcı ve Toner Motorlu Kurye Hizmeti',
-    provider: { '@type': 'LocalBusiness', name: 'Teknoklinik', url: SITE_URL, telephone: '+90-545-342-2944' },
+    provider: { '@type': 'LocalBusiness', name: 'Tecnoklinik', url: SITE_URL, telephone: '+90-545-342-2944' },
     areaServed: ['Atakum', 'İlkadım', 'Canik', 'Tekkeköy', 'Bafra', 'Çarşamba'].map(n => ({ '@type': 'City', name: `${n}, Samsun` })),
     hoursAvailable: { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'], opens: '00:00', closes: '23:59' },
     description: 'Samsun motorlu toner dolumu servisi ve yazıcı kurye hizmeti. 30 dakikada kapınızda, 7/24 aktif. Yazıcı ve kartuşunuzu kapıdan teslim alıp aynı gün iade ederiz.',
@@ -70,7 +70,7 @@ export default function KuryeHizmeti() {
   return (
     <div className="inner-page">
       <Seo
-        title="Samsun Motorlu Toner Dolumu Servisi ve 7/24 Kurye | 30 Dakikada — Teknoklinik"
+        title="Samsun Motorlu Toner Dolumu Servisi ve 7/24 Kurye | 30 Dakikada — Tecnoklinik"
         description="Samsun motorlu toner dolumu servisi ve yazıcı kurye hizmeti. Atakum, İlkadım, Canik, Tekkeköy'e 30 dakikada kapınızda. 7/24 motorlu kurye ile kapıdan teslim ve aynı gün iade."
         keywords="samsun motorlu toner dolumu servisi, motorlu toner dolumu, samsun yazıcı kurye, toner kurye samsun, 7/24 kurye toner, atakum toner kurye, ilkadım toner teslimat"
         path="/kurye-hizmeti"

@@ -48,7 +48,7 @@ export default function Header() {
             </svg>
           </div>
           <div className="logo-text">
-            <span className="logo-brand">Teknoklinik</span>
+            <span className="logo-brand">Tecnoklinik</span>
             <span className="logo-sub">Toner & Yazıcı Merkezi</span>
           </div>
         </Link>
