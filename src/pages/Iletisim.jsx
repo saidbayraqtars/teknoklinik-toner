@@ -77,6 +77,13 @@ export default function Iletisim() {
                   <div className="contact-card-value">0545 342 29 44</div>
                 </div>
               </a>
+              <a href="tel:+905070055877" className="contact-card">
+                <div className="contact-card-icon">📞</div>
+                <div>
+                  <div className="contact-card-title">Telefon 2</div>
+                  <div className="contact-card-value">0507 005 58 77</div>
+                </div>
+              </a>
               <div className="contact-card">
                 <div className="contact-card-icon">📍</div>
                 <div>
