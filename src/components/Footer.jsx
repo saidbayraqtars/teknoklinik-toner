@@ -47,9 +47,6 @@ export default function Footer() {
               <a href="tel:+905453422944" className="footer-contact-item">
                 <span>📞</span> 0545 342 29 44
               </a>
-              <a href="tel:+905070055877" className="footer-contact-item">
-                <span>📞</span> 0507 005 58 77
-              </a>
               <div className="footer-contact-item">
                 <span>📍</span> 19 Mayıs Mah. Dr. Kamil Cad. No:16/D, İlkadım/Samsun
               </div>

@@ -108,7 +108,7 @@ export default function TonerDolumu() {
             <span className="current">Toner Dolumu</span>
           </div>
           <h1>Samsun Toner Dolumu | HP, Canon, Brother, Epson</h1>
-          <p>Tüm marka ve modeller için garantili, profesyonel toner dolumu. 7/24 kurye ile kapınızdan teslim alıyoruz.</p>
+          <p>Tüm marka ve modeller için garantili, profesyonel Samsun toner dolumu. İlkadım'daki mağazamıza gelebilir veya 7/24 motorlu kurye ile kartuşunuzu kapınızdan teslim ettirebilirsiniz.</p>
           <div className="page-hero-actions">
             <a
               href="https://wa.me/905453422944?text=Toner%20dolumu%20fiyat%20almak%20istiyorum."

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#003366"/>
+      <stop offset="1" stop-color="#0055a5"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <g transform="translate(90,150)">
+    <rect width="84" height="84" rx="22" fill="#10B981"/>
+    <path d="M18 30h48M18 42h34M18 54h24" stroke="#fff" stroke-width="6" stroke-linecap="round"/>
+  </g>
+  <text x="200" y="195" font-family="Plus Jakarta Sans, Arial, sans-serif" font-size="44" font-weight="800" fill="#ffffff">Tecnoklinik</text>
+  <text x="200" y="232" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="500" fill="#9ec5e8">Toner Dolum &amp; Yazıcı Merkezi</text>
+  <text x="90" y="360" font-family="Plus Jakarta Sans, Arial, sans-serif" font-size="76" font-weight="800" fill="#ffffff">Samsun Toner Dolumu</text>
+  <text x="90" y="445" font-family="Plus Jakarta Sans, Arial, sans-serif" font-size="76" font-weight="800" fill="#10B981">7/24 Motorlu Kurye</text>
+  <text x="90" y="525" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="500" fill="#cfe3f5">30 dakikada kapınızda · HP Canon Brother Epson · 0545 342 29 44</text>
+</svg>

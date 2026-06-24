@@ -8,22 +8,10 @@ import './Home.css'
 const homeJsonLd = [
   {
     '@context': 'https://schema.org',
-    '@type': 'WebSite',
-    name: 'Tecnoklinik | Samsun Toner Dolumu ve Yazıcı Tamiri',
-    url: SITE_URL,
-    inLanguage: 'tr-TR',
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: `${SITE_URL}/blog?q={search_term_string}`,
-      'query-input': 'required name=search_term_string',
-    },
-  },
-  {
-    '@context': 'https://schema.org',
     '@type': 'Service',
     serviceType: 'Samsun Motorlu Toner Dolumu Servisi',
     name: 'Samsun Toner Dolumu ve Motorlu Kurye Hizmeti',
-    provider: { '@type': 'LocalBusiness', name: 'Tecnoklinik', url: SITE_URL, telephone: '+90-545-342-2944' },
+    provider: { '@type': 'LocalBusiness', '@id': `${SITE_URL}/#localbusiness`, name: 'Tecnoklinik', url: SITE_URL, telephone: '+90-545-342-2944' },
     areaServed: ['Atakum', 'İlkadım', 'Canik', 'Tekkeköy', 'Bafra', 'Çarşamba', 'Samsun'].map(n => ({ '@type': 'City', name: `${n}, Samsun` })),
     description: 'Samsun toner dolumu, motorlu toner dolumu servisi, kartuş yenileme ve yazıcı tamiri. 7/24 motorlu kurye ile 30 dakikada kapınızda.',
   },
@@ -309,7 +297,7 @@ export default function Home() {
             <h2 className="reveal reveal-delay-1">Atakum'dan Tekkeköy'e <br /><span className="gradient-text">Garantili Toner Dolumu</span></h2>
             <p className="reveal reveal-delay-2" style={{marginTop:'16px'}}>
               HP LaserJet, Canon imageCLASS, Brother HL ve Epson AL serisi yazıcılarınız için
-              profesyonel Samsun toner dolumu yapıyoruz. Motorlu toner dolumu servisi ile kartuşunuzu kapınızdan alır, dolum sonrası test baskısı ve 3 ay yazılı garanti ile iade ederiz.
+              profesyonel Samsun toner dolumu yapıyoruz. İster İlkadım'daki mağazamıza gelin, ister 7/24 motorlu toner dolumu servisi ile kartuşunuzu kapınızdan alalım; dolum sonrası test baskısı ve 3 ay yazılı garanti ile teslim ederiz.
             </p>
             <div className="toner-brands reveal reveal-delay-3">
               {brands.map(b => (
