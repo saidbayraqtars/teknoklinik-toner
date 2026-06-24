@@ -93,6 +93,102 @@ const articles = {
       </div>
     `,
   },
+  'atakumda-toner-dolumu': {
+    category: 'Yerel Rehber',
+    title: 'Atakum\'da Toner Dolumu Nerede Yaptırılır?',
+    date: '1 Aralık 2024',
+    iso: '2024-12-01',
+    readTime: '3 dk',
+    content: `
+      <p>Atakum'da yazıcınızın toneri bittiğinde iki seçeneğiniz var: pahalı orijinal kartuş almak ya da mevcut kartuşunuzu profesyonel olarak doldurtmak. Bu rehberde Atakum'da toner dolumunun en hızlı ve en ekonomik yolunu anlatıyoruz.</p>
+
+      <h3>Atakum'da En Hızlı Çözüm: Kapıdan Teslim veya Mağaza</h3>
+      <p>Tecnoklinik olarak Atakum'un tüm mahallelerine (Denizevleri, Mimarsinan, Körfez, Cumhuriyet, Atakent ve diğerleri) <strong>7/24 motorlu kurye</strong> hizmeti veriyoruz. Kartuşunuzu işyerinizden veya evinizden teslim alır, dolum sonrası genellikle aynı gün iade ederiz. Atakum'a ortalama ulaşım süremiz <strong>20-25 dakikadır</strong>. Dilerseniz İlkadım'daki mağazamıza bizzat de getirebilirsiniz.</p>
+
+      <h3>Hangi Marka ve Modeller?</h3>
+      <p>HP LaserJet, Canon imageCLASS / LBP, Brother HL ve MFC, Epson AL serisi başta olmak üzere Samsung ve Lexmark dahil tüm marka lazer yazıcılara Atakum toner dolumu yapıyoruz. Kartuş modelinizi (örn. HP 05A, Canon 725, Brother TN-2410) WhatsApp'tan iletmeniz net fiyat için yeterli.</p>
+
+      <h3>Fiyat ve Tasarruf</h3>
+      <p>Toner dolumu fiyatları markaya göre 250 ₺'den başlar. Orijinal kartuşa kıyasla yaklaşık <strong>%70 tasarruf</strong> sağlarsınız. Düzenli baskı yapan ofisler için bu yıllık bazda ciddi bir maliyet farkı demektir.</p>
+
+      <h3>Neden Profesyonel Dolum?</h3>
+      <p>Kaliteli uyumlu toz ve profesyonel ekipmanla yapılan dolum, baskı kalitesini orijinale yakın tutar ve yazıcınıza zarar vermez. Her dolum sonrası test baskısı yapılır ve <strong>3 ay yazılı garanti</strong> verilir.</p>
+
+      <div class="article-cta-box">
+        <h4>🛵 Atakum'da Toner Dolumu İçin Kurye Çağırın</h4>
+        <p>WhatsApp'tan yazın, kuryemiz 25 dakikada Atakum'da kapınızda. 3 ay garantili dolum.</p>
+        <a href="https://wa.me/905453422944?text=Atakum'da%20toner%20dolumu%20için%20kurye%20istiyorum." target="_blank" rel="noopener noreferrer">Kurye İste →</a>
+      </div>
+    `,
+  },
+  'canon-kafa-temizligi': {
+    category: 'Teknik Rehber',
+    title: 'Canon Yazıcı Kafa Temizliği Nasıl Yapılır?',
+    date: '28 Kasım 2024',
+    iso: '2024-11-28',
+    readTime: '5 dk',
+    content: `
+      <p>Canon mürekkep püskürtmeli (inkjet) yazıcınızda çizgili, soluk veya eksik renkli baskılar alıyorsanız, büyük olasılıkla yazıcı kafası (print head) tıkanmıştır. İyi haber: çoğu durumu evde, yazıcının kendi yazılımıyla çözebilirsiniz. İşte adım adım Canon kafa temizliği.</p>
+
+      <h3>1. Yazılımdan Kafa Temizliği Çalıştırın</h3>
+      <p>Windows'ta <strong>Denetim Masası → Aygıtlar ve Yazıcılar</strong> yolundan Canon yazıcınıza sağ tıklayın, <strong>Yazdırma Tercihleri → Bakım (Maintenance)</strong> sekmesine gidin. Buradan <strong>"Kafa Temizliği" (Cleaning)</strong> seçeneğini çalıştırın. Canon IJ Printer Assistant Tool veya Canon yazılımı da aynı menüyü sunar.</p>
+
+      <h3>2. Test Deseni Yazdırın ve Tekrarlayın</h3>
+      <p>Temizlik sonrası bir <strong>nozzle (meme) kontrol deseni</strong> yazdırın. Desende kopukluk veya eksik çizgi varsa temizliği 1-2 kez daha tekrarlayın. Her temizlik mürekkep harcadığından, üst üste 3-4 kereden fazla yapmayın.</p>
+
+      <h3>3. Derin Temizlik (Deep Cleaning)</h3>
+      <p>Normal temizlik yetmediyse aynı menüdeki <strong>"Derin Temizlik" (Deep Cleaning)</strong> seçeneğini deneyin. Bu işlem daha güçlüdür ama daha çok mürekkep kullanır.</p>
+
+      <h3>4. Kartuşu ve Temas Noktalarını Kontrol Edin</h3>
+      <p>Kartuşu çıkarın, alttaki püskürtme bölgesini tüy bırakmayan nemli bir bezle hafifçe silin. Bakır temas noktalarını kuru bezle temizleyin. Kartuş uzun süre kullanılmadıysa mürekkep kurumuş olabilir.</p>
+
+      <h3>5. Ne Zaman Servise Götürmeli?</h3>
+      <p>Tüm bu adımlara rağmen baskı düzelmiyorsa kafa kalıcı olarak tıkanmış veya arızalanmış olabilir. Bu durumda profesyonel kafa temizliği veya kafa değişimi gerekir — solvent bazlı ekipmanla yapılan işlem evde yapılamaz.</p>
+
+      <div class="article-cta-box">
+        <h4>🔧 Canon Kafası Hâlâ Tıkalı mı?</h4>
+        <p>Samsun genelinde 7/24 kurye ile yazıcınızı alıp profesyonel kafa temizliği yapıyoruz. Atakum, İlkadım, Canik, Tekkeköy.</p>
+        <a href="https://wa.me/905453422944?text=Canon%20yazıcı%20kafa%20temizliği%20için%20destek%20istiyorum." target="_blank" rel="noopener noreferrer">Destek Al →</a>
+      </div>
+    `,
+  },
+  'yazici-bakimi-nasil-yapilir': {
+    category: 'Bakım Rehberi',
+    title: 'Yazıcı Ömrünü Uzatmak için 7 Altın Kural',
+    date: '20 Kasım 2024',
+    iso: '2024-11-20',
+    readTime: '5 dk',
+    content: `
+      <p>Düzenli bakım ile yazıcınızın ömrünü yıllarca uzatabilir, arıza ve servis masrafından tasarruf edebilirsiniz. Uzman ekibimizden 7 pratik kural:</p>
+
+      <h3>1. Kaliteli Kağıt Kullanın</h3>
+      <p>80 gram/m² standart ofis kağıdı idealdir. Çok ince, nemli veya tozlu kağıtlar silindirleri aşındırır ve kağıt sıkışmasına yol açar.</p>
+
+      <h3>2. Yazıcıyı Tozdan Koruyun</h3>
+      <p>Kullanılmadığında kapağını kapatın veya üstünü örtün. Toz, lazer yazıcılarda drum ve optik birime, inkjet'lerde kafaya zarar verir.</p>
+
+      <h3>3. Düzenli Olarak Çıktı Alın</h3>
+      <p>Özellikle inkjet yazıcılarda haftada en az birkaç sayfa baskı, mürekkebin kurumasını ve kafanın tıkanmasını önler.</p>
+
+      <h3>4. Orijinal veya Kaliteli Uyumlu Sarf Malzemesi Kullanın</h3>
+      <p>Ucuz, denetimsiz toz ve mürekkep yazıcıya kalıcı zarar verebilir. Profesyonel toner dolumu, kaliteli uyumlu toz ile bu riski ortadan kaldırır.</p>
+
+      <h3>5. Yazıcıyı Doğru Kapatın</h3>
+      <p>Fişten ani çekmek yerine güç düğmesinden kapatın. Bu, inkjet'lerde kafanın park konumuna gitmesini ve kapanmasını sağlar.</p>
+
+      <h3>6. Yazılım ve Sürücüleri Güncel Tutun</h3>
+      <p>Güncel sürücüler bağlantı sorunlarını ve baskı hatalarını azaltır. Üreticinin sitesinden modelinize uygun güncel sürücüyü kurun.</p>
+
+      <h3>7. Periyodik Profesyonel Bakım</h3>
+      <p>Yılda bir kez iç temizlik, silindir ve drum kontrolü yaptırmak büyük arızaların önüne geçer. Yoğun kullanılan ofis yazıcıları için bu özellikle önemlidir.</p>
+
+      <div class="article-cta-box">
+        <h4>🖨️ Yazıcınıza Profesyonel Bakım</h4>
+        <p>Samsun'da 7/24 kurye ile yazıcı bakımı, toner dolumu ve teknik servis. 3 ay garanti.</p>
+        <a href="https://wa.me/905453422944?text=Yazıcı%20bakımı%20için%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener noreferrer">Bilgi Al →</a>
+      </div>
+    `,
+  },
 }
 
 const defaultArticle = {
@@ -119,11 +215,14 @@ export default function BlogDetail() {
       '@type': 'BlogPosting',
       headline: article.title,
       url: `${SITE_URL}${path}`,
-      datePublished: article.date,
+      mainEntityOfPage: `${SITE_URL}${path}`,
+      image: `${SITE_URL}/og-image.jpg`,
+      datePublished: article.iso || '2024-01-01',
+      dateModified: '2026-06-24',
       articleSection: article.category,
       inLanguage: 'tr-TR',
-      author: { '@type': 'Organization', name: 'Tecnoklinik' },
-      publisher: { '@type': 'Organization', name: 'Tecnoklinik', url: SITE_URL },
+      author: { '@type': 'Organization', name: 'Tecnoklinik', url: SITE_URL },
+      publisher: { '@type': 'Organization', name: 'Tecnoklinik', url: SITE_URL, logo: { '@type': 'ImageObject', url: `${SITE_URL}/og-image.jpg` } },
       description: desc,
     },
     {

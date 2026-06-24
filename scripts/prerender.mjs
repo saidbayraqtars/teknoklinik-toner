@@ -23,6 +23,9 @@ const ROUTES = [
   '/blog/yazici-neden-cizgili-cikiyor',
   '/blog/orijinal-toner-vs-profesyonel-dolum',
   '/blog/kagit-sikismasi-cozumu',
+  '/blog/atakumda-toner-dolumu',
+  '/blog/canon-kafa-temizligi',
+  '/blog/yazici-bakimi-nasil-yapilir',
 ]
 
 const MIME = {
