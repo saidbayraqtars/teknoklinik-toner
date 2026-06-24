@@ -7,6 +7,7 @@ const articles = {
     category: 'Sorun Giderme',
     title: 'Yazıcınız Neden Çizgili Çıkarıyor? 5 Neden ve Çözümü',
     date: '15 Aralık 2024',
+    iso: '2024-12-15',
     readTime: '4 dk',
     content: `
       <p>Yazıcınızdan çizgili veya bantlı baskılar çıkıyorsa, büyük ihtimalle aşağıdaki nedenlerden biri söz konusudur. İşte en yaygın 5 sebep ve çözüm önerileri:</p>
@@ -37,6 +38,7 @@ const articles = {
     category: 'Karşılaştırma',
     title: 'Orijinal Toner mu, Profesyonel Dolum mu? Gerçek Karşılaştırma',
     date: '10 Aralık 2024',
+    iso: '2024-12-10',
     readTime: '6 dk',
     content: `
       <p>Bu soru binlerce ofis ve bireysel kullanıcının aklını meşgul etmektedir. İşte kapsamlı bir karşılaştırma:</p>
@@ -67,6 +69,7 @@ const articles = {
     category: 'Teknik Rehber',
     title: 'HP Yazıcı Kağıt Sıkışması: Evde Çözebileceğiniz 3 Adım',
     date: '5 Aralık 2024',
+    iso: '2024-12-05',
     readTime: '3 dk',
     content: `
       <p>HP yazıcınızda kağıt sıkışması yaşıyorsanız paniğe kapılmayın. Servise göndermeden önce bu 3 adımı deneyin:</p>

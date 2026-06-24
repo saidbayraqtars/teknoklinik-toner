@@ -1,9 +1,28 @@
 import { Link } from 'react-router-dom'
 import Seo, { SITE_URL } from '../components/Seo'
-import heroImg from '../assets/images/hero.png'
-import tonerImg from '../assets/images/toner.png'
-import kuryeImg from '../assets/images/kurye.png'
+import heroImg from '../assets/images/hero.webp'
+import tonerImg from '../assets/images/toner.webp'
+import kuryeImg from '../assets/images/kurye.webp'
 import './Home.css'
+
+const homeFaqs = [
+  {
+    q: 'Samsun\'da toner dolumu ne kadar sürede teslim edilir?',
+    a: 'Motorlu kurye ağımız Samsun genelinde 7/24 aktiftir. Atakum, İlkadım, Canik ve Tekkeköy\'e ortalama 30 dakikada ulaşır, kartuşunuzu kapıdan teslim alır ve dolum sonrası genellikle aynı gün iade ederiz. Dilerseniz İlkadım\'daki mağazamıza da bizzat getirebilirsiniz.',
+  },
+  {
+    q: 'Toner dolumunun garantisi var mı?',
+    a: 'Evet. Tüm toner dolumları 3 ay yazılı garanti kapsamındadır. Bu süre içinde baskı kalitesinde sorun yaşarsanız ücretsiz yeniden dolum yapılır.',
+  },
+  {
+    q: 'Hangi marka yazıcılara toner dolumu yapıyorsunuz?',
+    a: 'HP, Canon, Brother, Epson, Samsung ve Lexmark başta olmak üzere tüm marka lazer ve mürekkep püskürtmeli yazıcılara Samsun toner dolumu ve kartuş yenileme hizmeti veriyoruz.',
+  },
+  {
+    q: 'Samsun toner dolumu fiyatları ne kadar?',
+    a: 'Toner dolumu fiyatları markaya ve modele göre 250 ₺\'den başlar. Orijinal tonere göre yaklaşık %70 tasarruf sağlar. Net fiyat için WhatsApp veya telefonla kartuş modelinizi iletmeniz yeterlidir.',
+  },
+]
 
 const homeJsonLd = [
   {
@@ -14,6 +33,15 @@ const homeJsonLd = [
     provider: { '@type': 'LocalBusiness', '@id': `${SITE_URL}/#localbusiness`, name: 'Tecnoklinik', url: SITE_URL, telephone: '+90-545-342-2944' },
     areaServed: ['Atakum', 'İlkadım', 'Canik', 'Tekkeköy', 'Bafra', 'Çarşamba', 'Samsun'].map(n => ({ '@type': 'City', name: `${n}, Samsun` })),
     description: 'Samsun toner dolumu, motorlu toner dolumu servisi, kartuş yenileme ve yazıcı tamiri. 7/24 motorlu kurye ile 30 dakikada kapınızda.',
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: homeFaqs.map(f => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.a },
+    })),
   },
 ]
 
@@ -444,6 +472,24 @@ export default function Home() {
           </div>
           <div style={{textAlign:'center', marginTop:'40px'}}>
             <Link to="/blog" className="btn btn-outline btn-lg reveal">Tüm Yazıları Gör</Link>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="section">
+        <div className="container" style={{maxWidth:'820px'}}>
+          <div className="section-header">
+            <div className="section-label reveal">❓ Sık Sorulan Sorular</div>
+            <h2 className="section-title reveal reveal-delay-1">Samsun Toner Dolumu <span className="gradient-text">Hakkında</span></h2>
+          </div>
+          <div style={{display:'flex', flexDirection:'column', gap:'16px'}}>
+            {homeFaqs.map((f, i) => (
+              <div key={i} className={`card reveal reveal-delay-${i%3+1}`} style={{padding:'24px'}}>
+                <h3 style={{fontSize:'1.05rem', marginBottom:'10px'}}>❓ {f.q}</h3>
+                <p style={{color:'var(--text-muted)', lineHeight:1.6}}>{f.a}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

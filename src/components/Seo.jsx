@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 
 export const SITE_URL = 'https://samsuntonerdolum.com.tr'
 const SITE_NAME = 'Tecnoklinik'
-const DEFAULT_IMAGE = `${SITE_URL}/og-image.svg`
+const DEFAULT_IMAGE = `${SITE_URL}/og-image.jpg`
 
 function setMeta(attr, key, content) {
   if (!content) return

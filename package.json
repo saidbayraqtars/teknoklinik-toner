@@ -5,10 +5,15 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && node scripts/prerender.mjs",
+    "build:spa": "vite build",
+    "prerender": "node scripts/prerender.mjs",
+    "assets": "node scripts/assets.mjs",
     "preview": "vite preview"
   },
   "devDependencies": {
+    "puppeteer-core": "^25.2.1",
+    "sharp": "^0.35.2",
     "typescript": "~6.0.2",
     "vite": "^8.0.10"
   },

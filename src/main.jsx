@@ -4,10 +4,15 @@ import { BrowserRouter } from 'react-router-dom'
 import App from './App.jsx'
 import './index.css'
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+const app = (
   <React.StrictMode>
     <BrowserRouter>
       <App />
     </BrowserRouter>
-  </React.StrictMode>,
+  </React.StrictMode>
 )
+
+// Prerendered static HTML is served to crawlers/AI for full content + fast paint;
+// the client then renders fresh over it (avoids hydration text-node mismatches from a
+// browser-captured prerender, which lacks SSR text separators).
+ReactDOM.createRoot(document.getElementById('root')).render(app)

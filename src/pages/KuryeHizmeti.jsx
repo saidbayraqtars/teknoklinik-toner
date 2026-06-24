@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import Seo, { SITE_URL } from '../components/Seo'
-import kuryeImg from '../assets/images/kurye.png'
+import kuryeImg from '../assets/images/kurye.webp'
 import './Pages.css'
 
 const steps = [
